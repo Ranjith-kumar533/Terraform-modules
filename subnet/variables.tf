@@ -4,7 +4,7 @@ variable "subnet_names" {
   
 }
 
-variable "cidr_block" {
+variable "cidr_blocks" {
     type = list(string)
   
 }

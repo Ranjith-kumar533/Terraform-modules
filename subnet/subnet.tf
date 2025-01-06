@@ -3,20 +3,20 @@
 
 resource "aws_subnet" "Subnet1" {
     vpc_id = aws_vpc.vpc.id
-    cidr_block = element(cidr_block, 0)
+    cidr_block = element(var.cidr_blocks, 0)
 
     tags = {
-        Name = element(subnet_names, 0)
+        Name = element(var.subnet_names, 0)
     }
   
 }
 
 resource "aws_subnet" "Subnet2" {
     vpc_id = aws_vpc.vpc.id
-    cidr_block = element(cidr_block, 1)
+    cidr_block = element(var.cidr_blocks, 1)
 
     tags = {
-        Name = element(subnet_names, 1)
+        Name = element(var.subnet_names, 1)
     }
   
 }
