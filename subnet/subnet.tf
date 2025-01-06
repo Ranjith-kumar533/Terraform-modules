@@ -2,7 +2,7 @@
 #creating subnets for the vpc:
 
 resource "aws_subnet" "Subnet1" {
-    vpc_id = aws_vpc.vpc.id
+    vpc_id = var.vpc_id
     cidr_block = element(var.cidr_blocks, 0)
 
     tags = {
@@ -12,7 +12,7 @@ resource "aws_subnet" "Subnet1" {
 }
 
 resource "aws_subnet" "Subnet2" {
-    vpc_id = aws_vpc.vpc.id
+    vpc_id = var.vpc_id
     cidr_block = element(var.cidr_blocks, 1)
 
     tags = {
